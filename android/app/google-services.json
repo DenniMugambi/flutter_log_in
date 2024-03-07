@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "879141119925",
+    "firebase_url": "https://yohpa-app-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "yohpa-app",
+    "storage_bucket": "yohpa-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879141119925:android:1d22bd07caddb66b7adbfc",
+        "android_client_info": {
+          "package_name": "com.example.flutter_log_in"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJstwhpv6kqa7czPy_bD8blyS3MGkeFxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879141119925:android:e247b328889f562b7adbfc",
+        "android_client_info": {
+          "package_name": "com.example.ophara"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJstwhpv6kqa7czPy_bD8blyS3MGkeFxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
