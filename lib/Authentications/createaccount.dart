@@ -1,14 +1,10 @@
-import 'dart:math';
-import 'dart:typed_data';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_log_in/helpers/classes.dart';
-import 'package:flutter_log_in/helpers/loadings.dart';
-import 'package:http/http.dart' as http;
+import 'package:YohPal/helpers/classes.dart';
+import 'package:YohPal/helpers/loadings.dart';
 
 class Create1 extends StatefulWidget {
   @override

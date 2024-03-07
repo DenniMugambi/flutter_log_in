@@ -3,7 +3,7 @@ import 'package:connectivity/connectivity.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_log_in/helpers/loadings.dart';
+import 'package:YohPal/helpers/loadings.dart';
 class PassReset extends StatefulWidget {
 
   @override

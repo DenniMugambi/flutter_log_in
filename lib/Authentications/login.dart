@@ -5,11 +5,11 @@ import 'package:connectivity/connectivity.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_log_in/Authentications/createaccount.dart';
-import 'package:flutter_log_in/Authentications/resetpass.dart';
-import 'package:flutter_log_in/helpers/loadings.dart';
-import 'package:flutter_log_in/helpers/classes.dart';
-import 'package:flutter_log_in/homepage.dart';
+import 'package:YohPal/Authentications/createaccount.dart';
+import 'package:YohPal/Authentications/resetpass.dart';
+import 'package:YohPal/helpers/loadings.dart';
+import 'package:YohPal/helpers/classes.dart';
+import 'package:YohPal/homepage.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Login",
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
         ),
@@ -37,7 +37,7 @@ class _LoginState extends State<Login> {
       ),
       body: Container(
         width: double.infinity,
-        margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+        margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
         child: Form(
           key: this.formKey,
           child: Padding(
@@ -45,11 +45,11 @@ class _LoginState extends State<Login> {
             child: ListView(
               children: <Widget>[
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     color: Color.fromARGB(255, 128, 152, 170),
                   ),
-                  margin: EdgeInsets.fromLTRB(0, 20, 0, 10),
+                  margin: const EdgeInsets.fromLTRB(0, 20, 0, 10),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 10.0),
                     child: TextFormField(
@@ -58,10 +58,10 @@ class _LoginState extends State<Login> {
                       textInputAction: TextInputAction.next,
                       decoration: InputDecoration(
                         labelText: "Your Email",
-                        prefixIcon: Icon(Icons.email),
+                        prefixIcon: const Icon(Icons.email),
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                                 color: Colors.grey)),
                       ),
                       autofillHints: [AutofillHints.email],
@@ -73,11 +73,11 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     color: Color.fromARGB(255, 128, 152, 170),
                   ),
-                  margin: EdgeInsets.fromLTRB(0, 20, 0, 10),
+                  margin: const EdgeInsets.fromLTRB(0, 20, 0, 10),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 10.0),
                     child: TextFormField(
@@ -87,10 +87,10 @@ class _LoginState extends State<Login> {
                       textInputAction: TextInputAction.next,
                       decoration: InputDecoration(
                           labelText: "Your App Password",
-                          prefixIcon: Icon(Icons.lock),
+                          prefixIcon: const Icon(Icons.lock),
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                   color: Colors.grey)),
                           suffixIcon: GestureDetector(
                               onTap: () {
@@ -98,7 +98,7 @@ class _LoginState extends State<Login> {
                                   obscure = !obscure;
                                 });
                               },
-                              child: Icon(Icons.visibility))),
+                              child: const Icon(Icons.visibility))),
                       validator: (value) => value!.trim().isNotEmpty
                           ? null
                           : "Password is required",
@@ -113,7 +113,7 @@ class _LoginState extends State<Login> {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => PassReset()));
                       },
-                      child: Padding(
+                      child: const Padding(
                         padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                         child: Text(
                           "Forgot password?",
@@ -123,7 +123,7 @@ class _LoginState extends State<Login> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -135,7 +135,7 @@ class _LoginState extends State<Login> {
                         color: Colors.greenAccent,
                         height: 50,
                         width: 250,
-                        child: Center(
+                        child: const Center(
                           child: Padding(
                             padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
                             child: Text(
@@ -151,14 +151,14 @@ class _LoginState extends State<Login> {
                     ),
                   ],
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
+                        const Padding(
+                          padding: EdgeInsets.all(5.0),
                           child: Text(
                             "Don't have an account?, Create a new one here",
                             style: TextStyle(
@@ -174,7 +174,7 @@ class _LoginState extends State<Login> {
                           child: Container(
                             height: 50,
                              color:Colors.greenAccent,
-                            child: Center(
+                            child: const Center(
                               child: Padding(
                                 padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
                                 child: Text(
@@ -361,13 +361,13 @@ class _LoginState extends State<Login> {
           content: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              CircularProgressIndicator(
+              const CircularProgressIndicator(
                 backgroundColor: Colors.greenAccent,
               ),
               Text(
                 message,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               )
